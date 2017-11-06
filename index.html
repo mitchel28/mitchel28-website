@@ -15,10 +15,13 @@
     var winChance = 50;
     var ifWin = 0;
     function runGame() {
-      if (ifButton == 0) {
+        if (ifButton == 0) {
         ifButton = 1;
        if (math.round(math.random()*100) >= winChance) {ifWin = 1;}
-      }
+          
+          if (ifWin == 1) {} else {}
+       }
+      
     }
       
     function rotateImg(img) {
