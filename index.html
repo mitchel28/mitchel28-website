@@ -7,7 +7,9 @@
   <h1>Test your luck!</h1>
   <p>game instructions</p>
   <button onclick="runGame">Play</button>
-  <img src="" alt="">
+  <img src="" alt="a">
+  <img src="" alt="b">
+  <img src="" alt="c">
   <a href="www.google.com">google</a>
 </body>
   <script>
@@ -25,12 +27,12 @@
       
     }
       
-    function rotateImg(img) {
-      if (img == "") {document.getElementById("").src="";}
+    function rotateImg(img, ID) {
+      if (img == "1") {document.getElementById(ID).src="2";}
        else {
-          if (img == ""){document.getElementById("").src="";}
+          if (img == "2"){document.getElementById(ID).src="3";}
           else {
-            if (img == ""){document.getElementById("").src="";}
+            if (img == "3"){document.getElementById(ID).src="1";}
         }
       }
     }
