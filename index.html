@@ -29,7 +29,45 @@
                 rotateIMG(c);
                 setTimeout(50);
             }
-          } else {}
+             for (n = 0; n < 5; n++){
+                rotateIMG(b);
+                rotateIMG(c);
+                setTimeout(50);
+            }
+             for (n = 0; n < 5; n++){
+                if (document.getElementById(a).src != document.getElementById(b).src){
+                rotateIMG(b);}
+                rotateIMG(c);
+                setTimeout(50);
+            }
+             for (n = 0; n < 5; n++){
+                if (document.getElementById(b).src != document.getElementById(c).src){
+                rotateIMG(c);}
+                setTimeout(50);
+            }
+            //say winner
+          } else {
+          for (n = 0; n < 5; n++){
+                rotateIMG(a);
+                rotateIMG(b);
+                rotateIMG(c);
+                setTimeout(50);
+            }
+             for (n = 0; n < 5; n++){
+                rotateIMG(b);
+                rotateIMG(c);
+                setTimeout(50);
+            }
+             for (n = 0; n < 5; n++){
+                rotateIMG(b);
+                rotateIMG(c);
+                setTimeout(50);
+            }
+             for (n = 0; n < 5 && document.getElementById(a).src != document.getElementById(c).src; n++){
+                rotateIMG(c);
+                setTimeout(50);
+            }
+          }
        }
       
     }
