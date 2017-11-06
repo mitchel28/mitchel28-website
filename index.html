@@ -7,14 +7,14 @@
   <h1>Test your luck!</h1>
   <p>game instructions</p>
   <button onclick="runGame">Play</button>
-  <img src="" alt="a" id="a">
-  <img src="" alt="b" id="b">
-  <img src="" alt="c" id="c">
+  <img src="1" alt="a" id="a">
+  <img src="2" alt="b" id="b">
+  <img src="3" alt="c" id="c">
   <a href="www.google.com">google</a>
 </body>
   <script>
     var ifButton = 0;
-    var winChance = 50;
+    var winChance = 49;
     var ifWin = 0;
     
     function runGame() {
@@ -22,17 +22,24 @@
           ifButton = 1;
           if (math.round(math.random()*100) >= winChance) {ifWin = 1;}
           
-          if (ifWin == 1) {} else {}
+          if (ifWin == 1) {
+            for (n = 0; n < 5; n++){
+                rotateIMG(a);
+                rotateIMG(b);
+                rotateIMG(c);
+                setTimeout(50);
+            }
+          } else {}
        }
       
     }
       
-    function rotateImg(img, ID) {
-      if (img == "1") {document.getElementById(ID).src="2";}
+    function rotateImg(ID) {
+      if (document.getElementById(ID).src == "1") {document.getElementById(ID).src="2";}
        else {
-          if (img == "2"){document.getElementById(ID).src="3";}
+          if (document.getElementById(ID).src == "2"){document.getElementById(ID).src="3";}
           else {
-            if (img == "3"){document.getElementById(ID).src="1";}
+            if (document.getElementById(ID).src == "3"){document.getElementById(ID).src="1";}
         }
       }
     }
