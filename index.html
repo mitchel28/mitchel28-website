@@ -18,14 +18,16 @@
     var ifButton = 0;
     var winChance = 49;
     var ifWin = 0;
+    var y = 0;
     
     
                   function rotateIMG(x) {
-      if (document.getElementById(x).src == "https://mitchel28.github.io/mitchel28-website/coin.jfif") {document.getElementById(x).src="https://mitchel28.github.io/mitchel28-website/7.png";}
+                    y = '"' + x '"'
+      if (document.getElementById(y).src == "https://mitchel28.github.io/mitchel28-website/coin.jfif") {document.getElementById(y).src="https://mitchel28.github.io/mitchel28-website/7.png";}
        else {
-          if (document.getElementById(x).src == "https://mitchel28.github.io/mitchel28-website/7.png"){document.getElementById(x).src="https://mitchel28.github.io/mitchel28-website/clover.png";}
+          if (document.getElementById(y).src == "https://mitchel28.github.io/mitchel28-website/7.png"){document.getElementById(y).src="https://mitchel28.github.io/mitchel28-website/clover.png";}
           else {
-            if (document.getElementById(x).src == "https://mitchel28.github.io/mitchel28-website/clover.png"){document.getElementById(x).src="https://mitchel28.github.io/mitchel28-website/coin.jfif";}
+            if (document.getElementById(y).src == "https://mitchel28.github.io/mitchel28-website/clover.png"){document.getElementById(y).src="https://mitchel28.github.io/mitchel28-website/coin.jfif";}
         }
       }
     }
