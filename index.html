@@ -19,57 +19,63 @@
     var winChance = 49;
     var ifWin = 0;
     
+    function rotateAll()
+                {rotateIMG(a);
+                rotateIMG(b);
+                rotateIMG(c);}
+    
+    function rotateTwo(){
+      rotateIMG(b);
+                rotateIMG(c);
+    }
+    
     function runGame() {
         if (ifButton == 0) {
           ifButton = 1;
           if (math.round(math.random()*100) >= winChance) {ifWin = 1;}
           
-          if (ifWin == 1) {
-            for (n = 0; n < 5; n++){
-                rotateIMG(a);
-                rotateIMG(b);
-                rotateIMG(c);
-                setTimeout(50);
-            }
-             for (n = 0; n < 5; n++){
-                rotateIMG(b);
-                rotateIMG(c);
-                setTimeout(50);
-            }
-             for (n = 0; n < 5; n++){
-                if (document.getElementById(a).src != document.getElementById(b).src){
+  function winRotateOne(){
+                    if (document.getElementById(a).src != document.getElementById(b).src){
                 rotateIMG(b);}
                 rotateIMG(c);
-                setTimeout(50);
+  }
+          
+  function winRotateTwo(){
+                    if (document.getElementById(b).src != document.getElementById(c).src){
+                rotateIMG(c);}
+  }
+          
+    function rotateOne(){
+                      rotateIMG(c);
+    }
+          
+          if (ifWin == 1) {
+            for (n = 0; n < 5; n++){
+                setTimeout(rotateAll(), 50);
             }
              for (n = 0; n < 5; n++){
-                if (document.getElementById(b).src != document.getElementById(c).src){
-                rotateIMG(c);}
-                setTimeout(50);
+                setTimeout(rotateTwo(), 50);
+            }
+             for (n = 0; n < 5; n++){
+                setTimeout(winRotateOne(), 50);
+            }
+             for (n = 0; n < 5; n++){
+                setTimeout(winRotateTwo(), 50);
             }
             window.alert("You Win!")
             ifButton = 0;
           } else {
           for (n = 0; n < 5; n++){
-                rotateIMG(a);
-                rotateIMG(b);
-                rotateIMG(c);
-                setTimeout(50);
+                setTimeout(rotateAll(), 50);
             }
              for (n = 0; n < 5; n++){
-                rotateIMG(b);
-                rotateIMG(c);
-                setTimeout(50);
+                setTimeout(rotateTwo(), 50);
             }
+
              for (n = 0; n < 5; n++){
-                rotateIMG(b);
-                rotateIMG(c);
-                setTimeout(50);
+                setTimeout(rotateOne(), 50);
             }
-             for (n = 0; n < 5; n++){
-                rotateIMG(c);
-                setTimeout(50);
-            }
+            
             if (document.getElementById(a).src == document.getElementById(b).src && document.getElementById(b).src == document.getElementById(c).src)
             {rotateIMG(c);}
             window.alert("Try again.")
