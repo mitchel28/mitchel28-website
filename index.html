@@ -31,13 +31,13 @@
     }
     
     function rotateAll()
-                {rotateIMG("^'a^'");
-                rotateIMG("'b'");
-                rotateIMG("'c'");}
+                {rotateIMG("a");
+                rotateIMG("b");
+                rotateIMG("c");}
     
     function rotateTwo(){
-      rotateIMG("'b'");
-                rotateIMG("'c'");
+      rotateIMG("b");
+                rotateIMG("c");
     }
     
     function runGame() {
@@ -46,18 +46,18 @@
           if (Math.round(Math.random()*100) >= winChance) {ifWin = 1;}
           
   function winRotateOne(){
-                    if (document.getElementById("'a'").src != document.getElementById("'b'").src){
-                rotateIMG("'b'");}
-                rotateIMG("'c'");
+                    if (document.getElementById("a").src != document.getElementById("b").src){
+                rotateIMG("b");}
+                rotateIMG("c");
   }
           
   function winRotateTwo(){
-                    if (document.getElementById("b").src != document.getElementById("'c'").src){
-                rotateIMG("'c'");}
+                    if (document.getElementById("b").src != document.getElementById("c").src){
+                rotateIMG("c");}
   }
           
     function rotateOne(){
-                      rotateIMG("'c'");
+                      rotateIMG("c");
     }
           
 
