@@ -7,9 +7,9 @@
   <h1>Test your luck!</h1>
   <p>game instructions</p>
   <button onclick="runGame">Play</button>
-  <img src="1" alt="a" id="a">
-  <img src="2" alt="b" id="b">
-  <img src="3" alt="c" id="c">
+  <img src="coin.jfif" alt="a" id="a">
+  <img src="7.png" alt="b" id="b">
+  <img src="clover.png" alt="c" id="c">
   <a href="http://www.freestockphotos.biz/stockphoto/14051">Four leaf clover image</a>
   <a href="https://www.istockphoto.com/photos/coin">Coin image</a>
   <a href="https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=0ahUKEwiyi4Pf2azXAhVM82MKHZRGCYsQjxwIAw&url=http%3A%2F%2Fclipart-library.com%2Fclipart%2F1959193.htm&psig=AOvVaw04hUM0CY5GqHq653RcKA9h&ust=1510152266163801">7 image link</a>
@@ -78,11 +78,11 @@
     }
       
     function rotateImg(ID) {
-      if (document.getElementById(ID).src == "1") {document.getElementById(ID).src="2";}
+      if (document.getElementById(ID).src == "coin.jfif") {document.getElementById(ID).src="7.png";}
        else {
-          if (document.getElementById(ID).src == "2"){document.getElementById(ID).src="3";}
+          if (document.getElementById(ID).src == "7.png"){document.getElementById(ID).src="clover.png";}
           else {
-            if (document.getElementById(ID).src == "3"){document.getElementById(ID).src="1";}
+            if (document.getElementById(ID).src == "clover.png"){document.getElementById(ID).src="coin.jfif";}
         }
       }
     }
