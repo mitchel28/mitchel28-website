@@ -45,7 +45,7 @@
                 rotateIMG(c);}
                 setTimeout(50);
             }
-            //say winner
+            window.alert("You Win!")
           } else {
           for (n = 0; n < 5; n++){
                 rotateIMG(a);
@@ -63,11 +63,13 @@
                 rotateIMG(c);
                 setTimeout(50);
             }
-             for (n = 0; n < 5 && document.getElementById(a).src != document.getElementById(c).src; n++){
+             for (n = 0; n < 5; n++){
                 rotateIMG(c);
                 setTimeout(50);
             }
-            //say try again
+            if (document.getElementById(a).src == document.getElementById(b).src && document.getElementById(b).src == document.getElementById(c).src)
+            {rotateIMG(c);}
+            window.alert("Try again.")
           }
        }
       
