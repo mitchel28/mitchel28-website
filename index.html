@@ -1,4 +1,4 @@
-<html> 
+<html>
 <head>
   <link rel="stylesheet" type="text/css" href="styles.css">
 <title>mitchel28-website</title>
@@ -7,10 +7,7 @@
     var ifButton = 0;
     var winChance = 49;
     var ifWin = 0;
-    var tim = 0;
-    var time = 0;
-    
-    
+    var timer;
     
     
                   function rotateIMGa() {
@@ -74,59 +71,34 @@
           ifWin = 0;
           if (Math.round(Math.random()*100) >= winChance) {ifWin = 1;}
       
+    
           
           if (ifWin == 1) {
+            clearTimeout(timer);
             for (n = 0; n < 5; n++){
-                  clearTimeout(time);
-    time = setTimeout(function timer() {
-      tim = 0;
-    }, 500);
-               rotateAll();
+                timer = setTimeout(rotateAll, 500);
             }
              for (n = 0; n < 5; n++){
-                   clearTimeout(time);
-    time = setTimeout(function timer() {
-      tim = 0;
-    }, 500);
-                rotateTwo();
+                timer = setTimeout(rotateTwo, 1000);
             }
              for (n = 0; n < 5; n++){
-                   clearTimeout(time);
-    time = setTimeout(function timer() {
-      tim = 0;
-    }, 500);
-                winRotateOne();
+                timer = setTimeout(winRotateOne, 1500);
             }
              for (n = 0; n < 5; n++){
-                   clearTimeout(time);
-    time = setTimeout(function timer() {
-      tim = 0;
-    }, 500);
-                winRotateTwo();
+                timer = setTimeout(winRotateTwo, 2000);
             }
             window.alert("You Win!")
             ifButton = 0;
           } else {
+            clearTimeout(timer);
           for (n = 0; n < 5; n++){
-                clearTimeout(time);
-    time = setTimeout(function timer() {
-      tim = 0;
-    }, 500);
-                rotateAll();
+                timer = setTimeout(rotateAll, 500);
             }
              for (n = 0; n < 5; n++){
-                   clearTimeout(time);
-    time = setTimeout(function timer() {
-      tim = 0;
-    }, 500);
-                rotateTwo();
+                timer = setTimeout(rotateTwo, 1000);
             }
              for (n = 0; n < 5; n++){
-                   clearTimeout(time);
-    time = setTimeout(function timer() {
-      tim = 0;
-    }, 500);
-                rotateOne();
+                timer = setTimeout(rotateOne, 1500);
             }
           
             if (document.getElementById("a").src == document.getElementById("b").src && document.getElementById("b").src == document.getElementById("c").src)
