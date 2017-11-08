@@ -76,33 +76,33 @@
           if (ifWin == 1) {
             clearTimeout(timer);
             for (n = 0; n < 5; n++){
-                timer = setTimeout(rotateAll, 500);
+                timer = setTimeout(rotateAll, n*500 + 500);
             }
              for (n = 0; n < 5; n++){
-                timer = setTimeout(rotateTwo, 1000);
+                timer = setTimeout(rotateTwo, n*500 + 3000);
             }
              for (n = 0; n < 5; n++){
-                timer = setTimeout(winRotateOne, 1500);
+                timer = setTimeout(winRotateOne, n*500 + 5500);
             }
              for (n = 0; n < 5; n++){
-                timer = setTimeout(winRotateTwo, 2000);
+                timer = setTimeout(winRotateTwo, n*500 + 8000);
             }
             window.alert("You Win!")
             ifButton = 0;
           } else {
             clearTimeout(timer);
           for (n = 0; n < 5; n++){
-                timer = setTimeout(rotateAll, 500);
+                timer = setTimeout(rotateAll, n*500 + 500);
             }
              for (n = 0; n < 5; n++){
-                timer = setTimeout(rotateTwo, 1000);
+                timer = setTimeout(rotateTwo, n*500 + 3000);
             }
              for (n = 0; n < 5; n++){
-                timer = setTimeout(rotateOne, 1500);
+                timer = setTimeout(rotateOne, n*500 + 5500);
             }
           
             if (document.getElementById("a").src == document.getElementById("b").src && document.getElementById("b").src == document.getElementById("c").src)
-            {rotateIMGc();}
+            {timer = setTimeout(rotateIMGc, n*500 + 8000);}
             window.alert("Try again.")
             ifButton = 0;
           }
