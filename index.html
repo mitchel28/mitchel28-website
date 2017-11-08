@@ -38,6 +38,9 @@
       }
     }
     
+    function fixButton(){
+      ifButton = 0;}
+    
     function rotateAll()
                 {rotateIMGa();
                 rotateIMGb();
@@ -87,8 +90,9 @@
              for (n = 0; n < 5; n++){
                 setTimeout(winRotateTwo, n*500 + 8000);
             }
-            window.alert("Get Ready...");
-            ifButton = 0;
+           
+            setTimeout(window.alert.bind/(null, "You Win!"/), 8500)
+            setTimeout(fixButton, 8500)
           } else {
            
           for (n = 0; n < 5; n++){
@@ -102,9 +106,9 @@
             }
           
             if (document.getElementById("a").src == document.getElementById("b").src && document.getElementById("b").src == document.getElementById("c").src)
-            {setTimeout(rotateIMGc, n*500 + 8000);}
-            window.alert("Get Ready...");
-            ifButton = 0;
+            {setTimeout(rotateIMGc, 8000);}
+            setTimeout(window.alert.bind/(null, "Try again."/), 8500)
+            setTimeout(fixButton, 8500)
           }
        }
     }
