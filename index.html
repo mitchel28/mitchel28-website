@@ -7,6 +7,7 @@
     var ifButton = 0;
     var winChance = 49;
     var ifWin = 0;
+    var timer;
     
     
                   function rotateIMGa() {
@@ -74,30 +75,32 @@
     
           
           if (ifWin == 1) {
+            clearTimeout(timer);
             for (n = 0; n < 5; n++){
-                setTimeout(rotateAll, 500);
+                timer = setTimeout(rotateAll, 500);
             }
              for (n = 0; n < 5; n++){
-                setTimeout(rotateTwo, 500);
+                timer = setTimeout(rotateTwo, 1000);
             }
              for (n = 0; n < 5; n++){
-                setTimeout(winRotateOne, 500);
+                timer = setTimeout(winRotateOne, 1500);
             }
              for (n = 0; n < 5; n++){
-                setTimeout(winRotateTwo, 500);
+                timer = setTimeout(winRotateTwo, 2000);
             }
             window.alert("You Win!")
             ifButton = 0;
           } else {
+            clearTimeout(timer);
           for (n = 0; n < 5; n++){
-                setTimeout(rotateAll, 500);
+                timer = setTimeout(rotateAll, 500);
             }
              for (n = 0; n < 5; n++){
-                setTimeout(rotateTwo, 500);
+                timer = setTimeout(rotateTwo, 1000);
             }
 
              for (n = 0; n < 5; n++){
-                setTimeout(rotateOne, 500);
+                timer = setTimeout(rotateOne, 1500);
             }
           
             if (document.getElementById("a").src == document.getElementById("b").src && document.getElementById("b").src == document.getElementById("c").src)
