@@ -87,7 +87,7 @@
              for (n = 0; n < 5; n++){
                 setTimeout(winRotateTwo, n*500 + 8000);
             }
-            setTimeout(window.alert/("You Win!"/), n*500 + 10500);
+            window.alert("You Win!")
             ifButton = 0;
           } else {
            
@@ -103,7 +103,7 @@
           
             if (document.getElementById("a").src == document.getElementById("b").src && document.getElementById("b").src == document.getElementById("c").src)
             {setTimeout(rotateIMGc, n*500 + 8000);}
-            setTimeout(window.alert/("Try again."/), n*500 + 10500);
+            window.alert("Try again.")
             ifButton = 0;
           }
        }
