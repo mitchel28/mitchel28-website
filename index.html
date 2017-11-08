@@ -103,13 +103,12 @@
       tim = 0;
     }, 500);
                 winRotateTwo();
+               if (n =4){
+               window.alert("You Win!")
+            ifButton = 0;}
             }
-                              clearTimeout(time);
-    time = setTimeout(function timer() {
-      tim = 0;
-    }, 500);
-            window.alert("You Win!")
-            ifButton = 0;
+  
+            
           } else {
           for (n = 0; n < 5; n++){
                 clearTimeout(time);
@@ -134,18 +133,14 @@
             }
           
             if (document.getElementById("a").src == document.getElementById("b").src && document.getElementById("b").src == document.getElementById("c").src)
-            {                  clearTimeout(time);
-    time = setTimeout(function timer() {
-      tim = 0;
-    }, 500);
-              rotateIMGc();}
-                              clearTimeout(time);
-    time = setTimeout(function timer() {
-      tim = 0;
-    }, 500);
-            window.alert("Try again.")
+            {    
+       
+    rotateIMGc();
+              window.alert("Try again.")
             ifButton = 0;
-          }
+           
+          } else{ window.alert("Try again.")
+            ifButton = 0;}
        }
     }
       
