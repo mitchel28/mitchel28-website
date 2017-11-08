@@ -7,11 +7,7 @@
     var ifButton = 0;
     var winChance = 49;
     var ifWin = 0;
-    var tim;
-    var time;
-    
-    
-
+    var timer;
     
     
                   function rotateIMGa() {
@@ -75,69 +71,38 @@
           ifWin = 0;
           if (Math.round(Math.random()*100) >= winChance) {ifWin = 1;}
       
-
+    
           
           if (ifWin == 1) {
-                 clearTimeout(time);
+            clearTimeout(timer);
             for (n = 0; n < 5; n++){
-             
-    time = setTimeout(function timer() {
-      tim = 0;
-    }, 500);
-               rotateAll();
+                timer = setTimeout(rotateAll, 500);
             }
              for (n = 0; n < 5; n++){
-                
-    time = setTimeout(function timer() {
-      tim = 0;
-    }, 1000);
-                rotateTwo();
+                timer = setTimeout(rotateTwo, 1000);
             }
              for (n = 0; n < 5; n++){
-                  
-    time = setTimeout(function timer() {
-      tim = 0;
-    }, 1500);
-                winRotateOne();
+                timer = setTimeout(winRotateOne, 1500);
             }
              for (n = 0; n < 5; n++){
-                
-    time = setTimeout(function timer() {
-      tim = 0;
-    }, 2000);
-                winRotateTwo();
+                timer = setTimeout(winRotateTwo, 2000);
             }
-
             window.alert("You Win!")
             ifButton = 0;
           } else {
-            clearTimeout(time);
+            clearTimeout(timer);
           for (n = 0; n < 5; n++){
-                
-    time = setTimeout(function timer() {
-      tim = 0;
-    }, 500);
-                rotateAll();
+                timer = setTimeout(rotateAll, 500);
             }
              for (n = 0; n < 5; n++){
-                   
-    time = setTimeout(function timer() {
-      tim = 0;
-    }, 1000);
-                rotateTwo();
+                timer = setTimeout(rotateTwo, 1000);
             }
-
              for (n = 0; n < 5; n++){
-                   
-    time = setTimeout(function timer() {
-      tim = 0;
-    }, 1500);
-                rotateOne();
+                timer = setTimeout(rotateOne, 1500);
             }
           
             if (document.getElementById("a").src == document.getElementById("b").src && document.getElementById("b").src == document.getElementById("c").src)
-            {
-              rotateIMGc();}
+            {rotateIMGc();}
             window.alert("Try again.")
             ifButton = 0;
           }
