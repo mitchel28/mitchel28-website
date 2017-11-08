@@ -78,58 +78,60 @@
 
           
           if (ifWin == 1) {
+                 clearTimeout(time);
             for (n = 0; n < 5; n++){
-                  clearTimeout(time);
+             
     time = setTimeout(function timer() {
       tim = 0;
     }, 500);
                rotateAll();
             }
              for (n = 0; n < 5; n++){
-                   clearTimeout(time);
+                
     time = setTimeout(function timer() {
       tim = 0;
-    }, 500);
+    }, 1000);
                 rotateTwo();
             }
              for (n = 0; n < 5; n++){
-                   clearTimeout(time);
+                  
     time = setTimeout(function timer() {
       tim = 0;
-    }, 500);
+    }, 1500);
                 winRotateOne();
             }
              for (n = 0; n < 5; n++){
-                   clearTimeout(time);
+                
     time = setTimeout(function timer() {
       tim = 0;
-    }, 500);
+    }, 2000);
                 winRotateTwo();
             }
 
             window.alert("You Win!")
             ifButton = 0;
           } else {
+            clearTimeout(time);
           for (n = 0; n < 5; n++){
-                clearTimeout(time);
+                
     time = setTimeout(function timer() {
       tim = 0;
     }, 500);
                 rotateAll();
             }
              for (n = 0; n < 5; n++){
-                   clearTimeout(time);
+                   
     time = setTimeout(function timer() {
       tim = 0;
-    }, 500);
+    }, 1000);
                 rotateTwo();
             }
 
              for (n = 0; n < 5; n++){
-                   clearTimeout(time);
+                   
     time = setTimeout(function timer() {
       tim = 0;
-    }, 500);
+    }, 1500);
                 rotateOne();
             }
           
